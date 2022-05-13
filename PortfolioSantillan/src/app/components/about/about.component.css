@@ -1,0 +1,29 @@
+.row {
+    padding: 20px;
+}
+
+.nombre {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+
+.about-titles {
+    font-style: italic;
+    font-size: 0.8rem;
+    line-height: 2px;
+}
+
+/* Profile pic */
+
+@media (min-width: 576px) {
+
+#profile-pic {
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 4px 4px 4px rgb(204, 203, 203);
+    top: 60%
+}
+
+}
