@@ -1,3 +1,7 @@
 #formal, #capaciontariones {
     display: inline;
 }
+
+.row {
+    padding: 40px;
+}
