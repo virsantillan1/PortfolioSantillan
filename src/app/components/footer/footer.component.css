@@ -1,0 +1,10 @@
+.row {
+    padding: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
