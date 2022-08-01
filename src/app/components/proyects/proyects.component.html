@@ -1,12 +1,29 @@
 <div class="row">
-    <h1>Proyects</h1>
-        <div class="container">
-            <div class="col-sm-10 col-md-8 col-lg-8 titleproyect">
-                <h1>Halterados</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus vitae, molestiae quasi quaerat voluptatem, adipisci iure eum veniam voluptatum optio quia eaque. Esse ducimus facere laboriosam voluptatem, aperiam magnam quam?</p>
-            </div>
-            <div class="col-sm-10 col-md-8 col-lg-8 imgproyect offset-md-1">
-                <img src="../../../assets/behance.png" alt="">
-            </div>
-        </div>
+    <div class="col-lg-10">
+        <h1>Proyectos</h1>
+    </div>
+
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevopro" *ngIf="isLogged">
+            Agregar proyecto
+        </button>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyectos of pro">
+                    <td>{{Proyectos.nombrePro}}</td>
+                    <td>{{Proyectos.descripcionPro}}</td>
+                    <td *ngIf="isLogged"><button class="btn btn-secondary" routerLink="/editpro/{{Proyectos.id}}"><i
+                                class="bi bi-pencil-square"></i></button></td>
+                    <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyectos.id)"><i
+                                class="bi bi-x-circle"></i></button></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
 </div>
